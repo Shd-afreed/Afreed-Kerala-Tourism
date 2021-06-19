@@ -1,0 +1,94 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.cont{
+    background-color:transparent !important;
+    background-image: url(../image/bg.jpg);
+    background-size: 100% 700px;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 100%;
+    color: white;
+    align-items: flex-end;
+    
+    
+}
+
+.car{
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    
+}
+
+.title{
+    margin: 25px;
+    text-align:center ;
+    color: black;
+    
+}
+.caard{
+    position: relative;
+    float: left;
+    display: inline;
+
+}
+
+.buttons{
+    font-size: 50px;
+    margin-left: 100px;
+    display: inline;
+}
+.navs{
+    align-items: center;
+    margin-right: 800px;
+    overflow: hidden;
+    display: inline;
+    
+}
+
+.navs a{
+    margin-right: 10px;
+    opacity: 0.6;
+}
+
+.navs a:hover{
+    border-bottom: 5px solid green;
+
+}
+
+.dist{
+    width: 50%;
+    float: left;
+
+}
+
+/* .distimg section{
+    position: relative;
+    background-image: url(/image/kasaragod1.png);
+    width: 50%;
+    min-height: 100vh;
+    margin-left: 50%;
+    background-repeat: no-repeat;
+    margin-left: 50%;
+    background-size: cover;
+    
+} */
+
+/* .distimg section::before{
+    content: ' ';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width:50% ;
+    height: fit-content;
+    background: url(/image/splash.jpg);
+    background-position: center;
+    mix-blend-mode: screen;
+
+} */
