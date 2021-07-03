@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup |kerala Tourism</title>
+    <title>SignIn |kerala Tourism</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="shortcut icon" href="https://www.keralatourism.org/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
  .bg-light{
@@ -39,7 +40,7 @@
               <div class="collapse navbar-collapse" id="navbarNav" style=" font-size: 25px; color:rgb(34, 34, 92) ; padding-right: 200px;">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link  " aria-current="page" href="signin.html" style="padding-top: 50px; color:rgb(3, 3, 90) ;">SignIn</a>
+                    <!-- <a class="nav-link  " aria-current="page" href="signin.html" style="padding-top: 50px; color:rgb(3, 3, 90) ;">SignIn</a> -->
                   </li>
                   
                 </ul>
@@ -64,36 +65,84 @@
                     <img src="logo.png" alt="logo" class="logo" style="height: 80px; width: 130px;">
                   </div>
                   <p class="login-card-description">Register your details</p>
-                  <form action="#!">
-                      <div class="form-group">
+                  <form action="signin.html"  onsubmit="return validate()"> 
+                      <div class="form-group" style="padding: 0%; margin: 0%;">
                         <label for="name" class="sr-only">Name</label>
-                        <input type="name" name="name" id="name" class="form-control" placeholder="Name">
+                        <input type="name" name="name" id="name1" class="form-control" placeholder="Name" style="margin: 0%;">
+                        <label for="error" id="error" style="margin-top: 0%;"></label>
                       </div>
-                      <div class="form-group mb-4">
+                      <div class="form-group " style="padding: 0%; margin: 0%;">
                         <label for="email" class="sr-only">Email</label>
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Email Address">
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Email Address" style="margin: 0%;">
+                        <label for="error" id="error1" style="margin-top: 0%;"></label>
                       </div>
-                      <div class="form-group mb-6">
+
+                      <div class="form-group " style="padding: 0%; margin: 0%;">
+                        <label for="phonenumber" class="sr-only">Phone Number</label>
+                        <input type="text" name="number" id="number" class="form-control" placeholder="Phone Number" style="margin: 0%;">
+                        <label for="error" id="error2" style="margin-top: 0%;"></label>
+                      </div>
+
+                      <div class="field">
+                        <input onkeyup="trigger()" class="input" type="password" id="password" placeholder="  Type password" style="color: #000000;
+                        opacity: 1; font-size: .8rem;">
+                        <span class="showBtn">SHOW</span>
+                      
+                        <div class="popup" onclick="myFunction()"><i class="far fa-question-circle"></i>
+                          <span class="popuptext" id="myPopup"><ul>
+                            <li>Minimum 8 characters</li>
+                            <li>At least one uppercase ,and one lowercase</li>
+                  
+                            <li>Must contain at least one number</li>
+                          </ul></span>
+                        </div>
+                        
+                       
+                       
+                        
+
+
+                     </div>
+                     <div class="indicator">
+                        <span class="weak"></span>
+                        <span class="medium"></span>
+                        <span class="strong"></span>
+                        <div class="text"></div>
+                     </div>
+                      <label for="error" id="error3" style="margin-top: 0%;"></label>
+                      <!-- <div class="form-group " style="padding: 0%; margin: 0%;">
                         <label for="password" class="sr-only">Password</label>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Type your Password">
+                        <input type="password" name="password" id="psw-input" class="form-control" placeholder="Type your Password" >
+                       
                       </div>
-                      <div class="form-group mb-6">
+                      <div id="pswmeter"></div>
+                      <div id="pswmeter-message"></div> -->
+
+                      <div class="form-group ">
                         <label for="password" class="sr-only">Password</label>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Retype your Password">
+                        <input type="password" name="password" id="password1" class="form-control" placeholder="Retype your Password" style="margin-top: 0%;">
+                        <label for="error" id="error4" style="margin-top: 0%;"></label>
                       </div>
-                      <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="SignUp">
+                      <button id="submit" class="btn btn-block login-btn mb-4"   style="margin-top: 0%;">SignUp</button>
+                      <!-- <input name="login" id="submit"  type="button" value="SignUp"> -->
                     </form>
+                    <p class="login-card-footer-text">Already have an account?<a href="signin.html" class="text-reset" style="font-weight: bold;">LogIn</a></p>
                    
-                    <nav class="login-card-footer-nav">
-                      <a href="#!">Terms of use.</a>
-                      <a href="#!">Privacy policy</a>
-                    </nav>
+                    <!-- <nav class="login-card-footer-nav"> -->
+                      <!-- <a href="#!">Terms of use.</a>
+                      <a href="#!">Privacy policy</a> -->
+                    
                 </div>
+
+                
+                
               </div>
             </div>
           </div>
         </div>
     </main></div>
+    
+    <script src="css/form.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
