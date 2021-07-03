@@ -223,7 +223,7 @@ const indicator = document.querySelector(".indicator");
           var pw2 = document.getElementById("password1");  
           if(pw1.value.trim() != pw2.value.trim())  
           {  
-             error4.innerHTML="password did not matching";
+             error4.innerHTML="Password did not matching";
             error4.style.color="red";
             error4.style.fontFamily="italic";
           password1.style.border="red solid ";
